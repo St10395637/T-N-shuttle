@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1f4b">
+    <meta name="description" content="Safe, reliable shuttle travel between Polokwane, Pretoria and Johannesburg. Request a trip with T&N Shuttle.">
+    <title>T&N Shuttle | Travel safe. Arrive on time.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav wrap" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="T&N Shuttle home">
+          <span class="brand-mark" aria-hidden="true">T</span>
+          <span>T&N <small>SHUTTLE</small></span>
+        </a>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="#routes">Routes</a>
+          <a href="#about">Why travel with us</a>
+          <a href="#booking">How to book</a>
+          <a class="nav-cta" href="#booking">Request a ride <span aria-hidden="true">↗</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home">
+        <div class="hero-glow hero-glow-one"></div>
+        <div class="hero-glow hero-glow-two"></div>
+        <div class="hero-inner wrap">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="live-dot"></span> YOUR JOURNEY, MADE EASIER</div>
+            <h1>Good journeys<br>start <span>with us.</span></h1>
+            <p class="hero-lead">Dependable shuttle trips between Polokwane, Pretoria and Johannesburg. Tell us where you’re going and we’ll help you plan the ride.</p>
+            <div class="hero-actions">
+              <a class="button button-gold" href="#booking">Plan your trip <span aria-hidden="true">→</span></a>
+              <a class="button button-outline" href="tel:+27794424351">Call 079 442 4351</a>
+            </div>
+            <div class="hero-trust">
+              <div class="trust-avatars" aria-hidden="true"><span>T</span><span>↗</span><span>✓</span></div>
+              <p><strong>Direct, personal service</strong><br><span>Speak with us about your trip</span></p>
+            </div>
+          </div>
+          <div class="journey-card" aria-label="Shuttle route overview">
+            <div class="journey-card-top"><span>YOUR ROUTE</span><span class="route-badge">LIMPOPO &amp; GAUTENG</span></div>
+            <div class="journey-map">
+              <svg viewBox="0 0 440 340" role="img" aria-labelledby="map-title map-desc">
+                <title id="map-title">T&N Shuttle route map</title>
+                <desc id="map-desc">Route connecting Polokwane, Pretoria and Johannesburg in South Africa.</desc>
+                <path class="map-contour contour-one" d="M10 102c45-54 89-20 123-48s83-28 112 7 73 15 92 45 65 24 93-2"/>
+                <path class="map-contour contour-two" d="M-12 231c51-24 72 20 119-2s66-47 109-24 53 46 91 20 88-8 139 30"/>
+                <path class="map-route-base" d="M116 65 233 209l-66 53"/>
+                <path class="map-route" d="M116 65 233 209l-66 53"/>
+                <circle class="map-stop-ring" cx="116" cy="65" r="12"/><circle class="map-stop" cx="116" cy="65" r="5"/>
+                <circle class="map-stop-ring" cx="233" cy="209" r="12"/><circle class="map-stop" cx="233" cy="209" r="5"/>
+                <circle class="map-stop-ring" cx="167" cy="262" r="12"/><circle class="map-stop" cx="167" cy="262" r="5"/>
+                <g class="map-label"><text x="137" y="61">POLOKWANE</text><text class="map-code" x="137" y="77">PLK</text></g>
+                <g class="map-label"><text x="254" y="205">PRETORIA</text><text class="map-code" x="254" y="221">PTA</text></g>
+                <g class="map-label"><text x="188" y="265">JOHANNESBURG</text><text class="map-code" x="188" y="281">JHB</text></g>
+              </svg>
+            </div>
+            <div class="journey-card-bottom">
+              <div><span class="status-indicator"></span><span>Three cities. One easy journey.</span></div>
+              <a href="#routes" aria-label="See available routes">Explore routes <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-bottom wrap">
+          <span>TRAVEL BETWEEN</span><span>POLOKWANE <i>✳</i></span><span>PRETORIA <i>✳</i></span><span>JOHANNESBURG</span>
+        </div>
+      </section>
+
+      <section class="features wrap" id="about" aria-label="Our service">
+        <article class="feature">
+          <span class="feature-icon" aria-hidden="true">✦</span>
+          <div><h2>Travel with confidence</h2><p>Personal service from booking through to your journey.</p></div>
+        </article>
+        <article class="feature">
+          <span class="feature-icon" aria-hidden="true">◷</span>
+          <div><h2>Your time matters</h2><p>Share your preferred departure and we’ll confirm the details with you.</p></div>
+        </article>
+        <article class="feature">
+          <span class="feature-icon" aria-hidden="true">↗</span>
+          <div><h2>Door-to-door details</h2><p>Tell us your pick-up and drop-off addresses when you request.</p></div>
+        </article>
+      </section>
+
+      <section class="routes-section section-pad" id="routes">
+        <div class="wrap">
+          <div class="section-heading">
+            <div><p class="eyebrow eyebrow-dark">GO YOUR WAY</p><h2>Our key <span>routes</span></h2></div>
+            <p>Choose a route to start your request. We’ll confirm availability, pick-up details and timing with you.</p>
+          </div>
+          <div class="route-grid">
+            <button class="route-card" type="button" data-from="PLK" data-to="PTA">
+              <span class="route-number">01 / ROUTE</span><span class="route-path"><strong>Polokwane</strong><i>→</i><strong>Pretoria</strong></span>
+              <span class="route-meta">PLK <span></span> PTA <b>Request this trip ↗</b></span>
+            </button>
+            <button class="route-card route-card-featured" type="button" data-from="PLK" data-to="JHB">
+              <span class="route-number">02 / ROUTE <em>POPULAR</em></span><span class="route-path"><strong>Polokwane</strong><i>→</i><strong>Johannesburg</strong></span>
+              <span class="route-meta">PLK <span></span> JHB <b>Request this trip ↗</b></span>
+            </button>
+            <button class="route-card" type="button" data-from="PTA" data-to="JHB">
+              <span class="route-number">03 / ROUTE</span><span class="route-path"><strong>Pretoria</strong><i>→</i><strong>Johannesburg</strong></span>
+              <span class="route-meta">PTA <span></span> JHB <b>Request this trip ↗</b></span>
+            </button>
+          </div>
+          <p class="route-note">Travelling the other direction? Select your exact pick-up and drop-off in the request form.</p>
+        </div>
+      </section>
+
+      <section class="booking-section section-pad" id="booking">
+        <div class="wrap booking-layout">
+          <div class="booking-copy">
+            <p class="eyebrow">LET’S GET YOU THERE</p>
+            <h2>Make your next move <span>simple.</span></h2>
+            <p>Send your trip details and continue to WhatsApp to contact us. Your request is not confirmed until we reply to you.</p>
+            <div class="contact-card">
+              <span class="contact-card-icon" aria-hidden="true">↗</span>
+              <div><small>Prefer to speak to someone?</small><a href="tel:+27794424351">079 442 4351</a><a href="tel:+27678436724">067 843 6724</a></div>
+            </div>
+            <p class="privacy-note">We don’t store booking form details on this website. Your message opens in WhatsApp for you to review and send.</p>
+          </div>
+          <form class="booking-form" id="booking-form">
+            <div class="form-heading"><div><span class="form-step">TRIP REQUEST</span><h3>Where are you headed?</h3></div><span class="form-mark" aria-hidden="true">T.</span></div>
+            <div class="form-grid">
+              <label class="field"><span>Pick-up town</span><select name="from" id="from" required><option value="">Choose a town</option><option value="PLK">Polokwane (PLK)</option><option value="PTA">Pretoria (PTA)</option><option value="JHB">Johannesburg (JHB)</option></select></label>
+              <label class="field"><span>Drop-off town</span><select name="to" id="to" required><option value="">Choose a town</option><option value="PLK">Polokwane (PLK)</option><option value="PTA">Pretoria (PTA)</option><option value="JHB">Johannesburg (JHB)</option></select></label>
+              <label class="field field-wide"><span>Pick-up address <small>Optional</small></span><input name="pickup" maxlength="200" autocomplete="street-address" placeholder="Suburb or street"></label>
+              <label class="field field-wide"><span>Drop-off address <small>Optional</small></span><input name="dropoff" maxlength="200" placeholder="Suburb or street"></label>
+              <label class="field"><span>Travel date</span><input name="date" id="date" type="date" required></label>
+              <label class="field"><span>Preferred time</span><input name="time" type="time" required></label>
+              <label class="field"><span>Passengers</span><select name="passengers"><option value="1">1 passenger</option><option value="2">2 passengers</option><option value="3">3 passengers</option><option value="4">4 passengers</option></select></label>
+              <label class="field"><span>Your name</span><input name="name" required maxlength="100" autocomplete="name" placeholder="Full name"></label>
+              <label class="field"><span>Phone number</span><input name="phone" required maxlength="20" autocomplete="tel" type="tel" placeholder="e.g. 079 123 4567"></label>
+              <label class="field field-wide"><span>Anything else? <small>Optional</small></span><textarea name="notes" maxlength="500" rows="3" placeholder="Luggage, special requests…"></textarea></label>
+            </div>
+            <div class="form-error" id="form-error" role="alert" hidden></div>
+            <button class="button button-gold form-submit" type="submit"><span>Continue to WhatsApp</span><span aria-hidden="true">↗</span></button>
+            <p class="form-footnote">We’ll confirm availability and your trip details directly with you.</p>
+            <div class="form-success" id="form-success" role="status" hidden></div>
+          </form>
+        </div>
+      </section>
+
+      <section class="last-call">
+        <div class="wrap last-call-inner">
+          <div><p class="eyebrow">READY WHEN YOU ARE</p><h2>Let’s make this a good journey.</h2></div>
+          <a class="button button-gold" href="#booking">Request a ride <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <a class="brand brand-footer" href="#home"><span class="brand-mark" aria-hidden="true">T</span><span>T&N <small>SHUTTLE</small></span></a>
+        <p>MG Autoways · Polokwane · Pretoria · Johannesburg</p>
+        <div><a href="tel:+27794424351">079 442 4351</a><span>·</span><a href="tel:+27678436724">067 843 6724</a></div>
+        <small>© <span id="year"></span> T&N Shuttle</small>
+        <small>© <span id="year"></span> Tel4d_Pil4ne</small>
+      </div>
+    </footer>
+    <a class="whatsapp-float" href="https://wa.me/27794424351?text=Hi%20T&N%20Shuttle%2C%20I%27d%20like%20to%20ask%20about%20a%20shuttle%20trip." target="_blank" rel="noopener noreferrer" aria-label="Message T&N Shuttle on WhatsApp">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a12.8 12.8 0 0 0-11 19.3L3.3 29l6.9-1.8A12.9 12.9 0 1 0 16 3Zm0 23.3a10.4 10.4 0 0 1-5.3-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4a10.3 10.3 0 1 1 9 5Zm5.7-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1a8.2 8.2 0 0 1-4.1-3.6c-.3-.5.3-.6.9-1.7.1-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 
+
+  </body>
+</html>
