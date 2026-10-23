@@ -97,7 +97,7 @@ form.addEventListener("submit", async (event) => {
     }
 
     const message = [
-      "Hi Thabang, I would like to request a shuttle booking.",
+      "Hi T&A Shuttle, I would like to request a shuttle booking.",
       `From: ${towns[booking.from]} (${booking.from})`,
       `To: ${towns[booking.to]} (${booking.to})`,
       `Pick-up address: ${booking.pickup || "-"}`,

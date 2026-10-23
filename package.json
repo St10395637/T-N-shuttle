@@ -1,8 +1,8 @@
 {
-  "name": "tn-shuttle",
+  "name": "ta-shuttle",
   "version": "1.0.0",
   "private": true,
-  "description": "T&N Shuttle website and booking request API",
+  "description": "T&A Shuttle website and booking request API",
   "type": "module",
   "scripts": {
     "start": "node server.mjs",

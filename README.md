@@ -1,4 +1,4 @@
-# Thabang Shuttle
+# T&A Shuttle
 
 A responsive shuttle website for travel between Polokwane (PLK), Pretoria (PTA) and Johannesburg (JHB), with a small Node.js booking-request API.
 

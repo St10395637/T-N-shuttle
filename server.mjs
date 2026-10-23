@@ -130,7 +130,7 @@ export function createAppServer() {
           ok: true,
           reference: randomUUID(),
           persisted: false,
-          message: "Details validated. Send the prepared WhatsApp message to contact Thabang and confirm your request.",
+          message: "Details validated. Send the prepared WhatsApp message to contact T&A Shuttle and confirm your request.",
         });
       } catch (error) {
         sendJson(response, error.statusCode || 500, {
@@ -158,6 +158,6 @@ export function createAppServer() {
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const server = createAppServer();
   server.listen(port, "0.0.0.0", () => {
-    console.log(`Thabang Shuttle is listening on port ${port}`);
+    console.log(`T&A Shuttle is listening on port ${port}`);
   });
 }
