@@ -71,6 +71,12 @@ function formatTripDate(value) {
   });
 }
 
+function closeWhatsAppWindows(windows) {
+  for (const whatsappWindow of windows) {
+    if (whatsappWindow && !whatsappWindow.closed) whatsappWindow.close();
+  }
+}
+
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
   errorBox.hidden = true;
@@ -81,10 +87,12 @@ form.addEventListener("submit", async (event) => {
   const booking = Object.fromEntries(data.entries());
   booking.passengers = Number(booking.passengers);
   const originalLabel = submitButton.innerHTML;
+  let whatsappWindows = [];
   submitButton.disabled = true;
   submitButton.innerHTML = "<span>Checking your details…</span>";
 
   try {
+    whatsappWindows = whatsappContacts.map(() => window.open("about:blank", "_blank"));
     const response = await fetch("/api/bookings", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -92,6 +100,7 @@ form.addEventListener("submit", async (event) => {
     });
     const result = await response.json();
     if (!response.ok) {
+      closeWhatsAppWindows(whatsappWindows);
       showErrors(result.fields || { form: result.error || "Unable to process this request." });
       return;
     }
@@ -112,21 +121,26 @@ form.addEventListener("submit", async (event) => {
     ].join("\n");
     successBox.replaceChildren();
     const text = document.createElement("p");
-    text.textContent = "Choose which number to message. Review the request in WhatsApp and press Send.";
+    text.textContent = "Your browser may open WhatsApp chats automatically. Review the message and press Send in each chat. If a chat does not open, use its button below.";
     const contacts = document.createElement("div");
     contacts.className = "whatsapp-contacts";
-    for (const contact of whatsappContacts) {
+    for (const [index, contact] of whatsappContacts.entries()) {
+      const whatsappLink = `https://wa.me/${contact.number}?text=${encodeURIComponent(message)}`;
       const link = document.createElement("a");
-      link.href = `https://wa.me/${contact.number}?text=${encodeURIComponent(message)}`;
+      link.href = whatsappLink;
       link.target = "_blank";
       link.rel = "noopener noreferrer";
       link.className = "button button-navy";
       link.textContent = `WhatsApp ${contact.label} ↗`;
       contacts.append(link);
+      if (whatsappWindows[index] && !whatsappWindows[index].closed) {
+        whatsappWindows[index].location.href = whatsappLink;
+      }
     }
     successBox.append(text, contacts);
     successBox.hidden = false;
   } catch (error) {
+    closeWhatsAppWindows(whatsappWindows);
     console.error("Booking request failed:", error);
     showErrors({ form: "We couldn't reach the booking service. Please try again or call 079 442 4351." });
   } finally {

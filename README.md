@@ -20,7 +20,7 @@ For production, run `npm.cmd start` and set `PORT` if the hosting provider suppl
 
 ## Booking behavior
 
-`POST /api/bookings` validates a JSON booking request and returns a request reference. It does **not** save the request or send it to the business. After validation, the website lets the visitor choose which of the two business numbers to message on WhatsApp. The visitor must review and send the prefilled message. A booking is only confirmed after the business replies.
+`POST /api/bookings` validates a JSON booking request and returns a request reference. It does **not** save the request or send it to the business. After the customer submits a valid form, the website attempts to open WhatsApp chats to both business numbers with the same prefilled message. Browsers may block one or both tabs; fallback links are shown on the page. The customer must review and press Send in each chat. A booking is only confirmed after the business replies.
 
 No database or email provider is configured yet. Before relying on the API to receive real bookings, connect a persistence or delivery service and update the endpoint so requests are securely stored or delivered. Do not put provider credentials in frontend code.
 
